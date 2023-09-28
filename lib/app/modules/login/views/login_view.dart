@@ -25,7 +25,7 @@ class LoginView extends GetView<LoginController> {
             ),
             SizedBox(height: 30),
             Text(
-              "ລະບົບຂາຍປີ້ໂດຍສານອອນລາຍ",
+              "ກະລຸນາໃສ່ດ້ວຍເບີໂທ ຂອງທ່ານ",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -62,60 +62,60 @@ class LoginView extends GetView<LoginController> {
                 Expanded(
                   child: RichText(
                     text: TextSpan(
-                      text: "ຈື່ຂ້ອຍໄວ້ ",
+                      text: "ຂ້ອຍຕົກລົງ,  ",
                       style: TextStyle(
                         color: Colors.black,
                       ),
-                      // children: [
-                      //   TextSpan(
-                      //     recognizer: TapGestureRecognizer()
-                      //       ..onTap = () {
-                      //         print("klik syarat");
-                      //       },
-                      //     text: "syarat",
-                      //     style: TextStyle(
-                      //       color: Colors.red,
-                      //     ),
-                      //   ),
-                      //   TextSpan(
-                      //     text: ",",
-                      //     style: TextStyle(
-                      //       color: Colors.black,
-                      //     ),
-                      //   ),
-                      //   TextSpan(
-                      //     recognizer: TapGestureRecognizer()
-                      //       ..onTap = () {
-                      //         print("klik ketentuan");
-                      //       },
-                      //     text: "ketentuan",
-                      //     style: TextStyle(
-                      //       color: Colors.red,
-                      //     ),
-                      //   ),
-                      //   TextSpan(
-                      //     text: ", dan ",
-                      //     style: TextStyle(
-                      //       color: Colors.black,
-                      //     ),
-                      //   ),
-                      //   TextSpan(
-                      //     recognizer: TapGestureRecognizer()
-                      //       ..onTap = () {
-                      //         print("klik privasi");
-                      //       },
-                      //     text: "privasi",
-                      //     style: TextStyle(
-                      //       color: Colors.red,
-                      //     ),
-                      //   ),
-                      //   TextSpan(
-                      //     text: " Telkomsel",
-                      //     style: TextStyle(
-                      //       color: Colors.black,
-                      //     ),
-                      //   ),
-                      // ],
+                      children: [
+                        TextSpan(
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              print("ເຫັນດີກັບ");
+                            },
+                          text: "ກັບເບີໂທ",
+                          style: TextStyle(
+                            color: Colors.red,
+                          ),
+                        ),
+                        TextSpan(
+                          text: ",",
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
+                        TextSpan(
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              print("ຂອງຂ້ອຍ");
+                            },
+                          // text: "ketentuan",
+                          // style: TextStyle(
+                          //   color: Colors.red,
+                          // ),
+                        ),
+                        TextSpan(
+                          text: ", ແລະ ",
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
+                        TextSpan(
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              print("ຄວາມຕົວຂອງ");
+                            },
+                          text: "ເປັນສ່ວນ",
+                          style: TextStyle(
+                            color: Colors.red,
+                          ),
+                        ),
+                        TextSpan(
+                          text: " ຕົວຂອງຂ້ອຍ",
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -137,7 +137,7 @@ class LoginView extends GetView<LoginController> {
             ),
             SizedBox(height: 20),
             Center(
-              child: Text("ຫຼືບັນຊີອື່ນ"),
+              child: Text("ຫຼືເຂົ້າສູ່ລະບົບໂດຍໃຊ້"),
             ),
             SizedBox(height: 40),
             Row(
@@ -180,10 +180,10 @@ class LoginView extends GetView<LoginController> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset("assets/icons/twitter.png"),
+                      Image.asset("assets/icons/google.png"),
                       SizedBox(width: 7),
                       Text(
-                        "Twitter",
+                        "Google",
                         style: TextStyle(
                           fontSize: 16,
                           color: Color(0xFF1DA1F2),

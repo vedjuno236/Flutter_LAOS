@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+// import 'package:mytsel/app/modules/bus/views/bus_view.dart';
+// import 'package:mytsel/app/modules/bus/bindings/bus_binding.dart';
 
 import 'package:mytsel/app/modules/home/bindings/home_binding.dart';
 import 'package:mytsel/app/modules/home/views/home_view.dart';
@@ -11,6 +13,7 @@ class AppPages {
   AppPages._();
 
   static const INITIAL = Routes.HOME;
+ 
 
   static final routes = [
     GetPage(
@@ -23,5 +26,10 @@ class AppPages {
       page: () => LoginView(),
       binding: LoginBinding(),
     ),
+    // GetPage(
+    //   name: _Paths.Bus,
+    //   page:() => BusView(),
+    //   binding:  BusBinding(),
+    //   ),
   ];
 }

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:mytsel/app/modules/bus/views/bus_view.dart';
+import 'package:mytsel/app/profile/profile_screen.dart';
+import 'package:mytsel/app/routes/app_pages.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -9,16 +13,16 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: false,
+         centerTitle: false,
         title: RichText(
           text: TextSpan(
-            text: "Hai, ",
+            text: "Hi, ",
             style: TextStyle(
               fontSize: 18,
             ),
             children: [
               TextSpan(
-                text: "Muhammad",
+                text: "vedjuno",
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -29,7 +33,9 @@ class HomeView extends GetView<HomeController> {
         ),
         actions: [
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Get.offAllNamed(Routes.LOGIN);
+            },
             child: Container(
               margin: EdgeInsets.only(right: 20),
               width: 30,
@@ -49,13 +55,13 @@ class HomeView extends GetView<HomeController> {
           ClipPath(
             clipper: ClipPathClass(),
             child: Container(
-              height: 250,
+              height: 200,
               width: Get.width,
               color: Color(0xFFEC2028),
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 20),
+            margin: EdgeInsets.only(top: 75),
             child: Column(
               children: [
                 Column(
@@ -79,50 +85,65 @@ class HomeView extends GetView<HomeController> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
-                                  "081290112333",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Image.asset("assets/logo/simpati.png"),
-                              ],
-                            ),
-                            SizedBox(height: 20),
-                            Text(
-                              "Sisa Pulsa Anda",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            SizedBox(height: 10),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  "Rp34.000",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 26,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                ElevatedButton(
-                                  onPressed: () {},
-                                  child: Text(
-                                    "Isi Pulsa",
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 20,
+                                Row(
+                                  children: [
+                                    // Icon(MdiIcons., size: 30),
+                                    Image.asset(
+                                      "assets/icons/ic-coin.png",
+                                      height: 30,
+                                      width: 30,
+                                      color: Color(0xFFF7B731),
                                     ),
-                                  ),
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Color(0xFFF7B731),
-                                  ),
+                                    SizedBox(width: 10),
+                                    Text(
+                                      "ຄະແນນ",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    // Icon(MdiIcons., size: 30),
+                                    Image.asset(
+                                      "assets/icons/kip.png",
+                                      height: 30,
+                                      width: 30,
+                                      color: Color(0xFFF7B731),
+                                    ),
+                                    SizedBox(width: 10),
+                                    Text(
+                                      "ຍອດເງີນຂອງຂ້ອຍ",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    // Icon(MdiIcons., size: 30),
+                                    Image.asset(
+                                      "assets/icons/ic-wallet.png",
+                                      height: 30,
+                                      width: 30,
+                                      color: Color(0xFFF7B731),
+                                    ),
+                                    SizedBox(width: 10),
+                                    Text(
+                                      "ຜູ້ຈ່າຍເງີນ",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),
@@ -131,31 +152,41 @@ class HomeView extends GetView<HomeController> {
                               color: Colors.black,
                             ),
                             SizedBox(height: 10),
-                            RichText(
-                              text: TextSpan(
-                                text: "Berlaku sampai ",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                ),
+                            Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
-                                  TextSpan(
-                                    text: "19 April 2020",
+                                  Text(
+                                    "10 000 Kip",
                                     style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 16,
+                                      fontSize: 13,
                                       fontWeight: FontWeight.bold,
                                     ),
-                                  )
-                                ],
-                              ),
-                            ),
+                                  ),
+                                  Text(
+                                    "ເຊື່ອມຕໍ່ໃໝ່ !",
+                                    style: TextStyle(
+                                      color: Colors.blue,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    "ເປີດໃຊ້ດຽວນີ້ !",
+                                    style: TextStyle(
+                                      color: Colors.blue,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ]),
                             SizedBox(height: 10),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Telkomsel POIN",
+                                  "",
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 16,
@@ -166,18 +197,6 @@ class HomeView extends GetView<HomeController> {
                                   padding: EdgeInsets.symmetric(
                                     horizontal: 10,
                                     vertical: 8,
-                                  ),
-                                  decoration: BoxDecoration(
-                                    color: Color(0xFFF7B731),
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: Text(
-                                    "172",
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
-                                    ),
                                   ),
                                 ),
                               ],
@@ -192,23 +211,23 @@ class HomeView extends GetView<HomeController> {
                       padding: const EdgeInsets.symmetric(horizontal: 25),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          StatusCard(
-                            title: "Internet",
-                            data: "12.19",
-                            satuan: "GB",
-                          ),
-                          StatusCard(
-                            title: "Telepon",
-                            data: "0",
-                            satuan: "Min",
-                          ),
-                          StatusCard(
-                            title: "SMS",
-                            data: "23",
-                            satuan: "SMS",
-                          ),
-                        ],
+                        // children: [
+                        //   StatusCard(
+                        //     title: "Internet",
+                        //     data: "12.19",
+                        //     satuan: "GB",
+                        //   ),
+                        //   StatusCard(
+                        //     title: "Telepon",
+                        //     data: "0",
+                        //     satuan: "Min",
+                        //   ),
+                        //   StatusCard(
+                        //     title: "SMS",
+                        //     data: "23",
+                        //     satuan: "SMS",
+                        //   ),
+                        // ],
                       ),
                     ),
                     SizedBox(height: 15),
@@ -230,7 +249,7 @@ class HomeView extends GetView<HomeController> {
                             children: [
                               SizedBox(height: 20),
                               Text(
-                                "Kategori Paket",
+                                "ລາຍການ",
                                 style: TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
@@ -242,20 +261,25 @@ class HomeView extends GetView<HomeController> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   ItemKategori(
-                                    title: "Internet",
-                                    icon: "assets/icons/internet.png",
-                                  ),
-                                  ItemKategori(
-                                    title: "Telpon",
-                                    icon: "assets/icons/telpon.png",
-                                  ),
-                                  ItemKategori(
-                                    title: "SMS",
-                                    icon: "assets/icons/sms.png",
-                                  ),
-                                  ItemKategori(
-                                    title: "Roaming",
+                                    title: "ເຄື່ອງບີນ",
                                     icon: "assets/icons/roaming.png",
+                                  ),
+                                  ItemKategori(
+                                    title: "ລົດໄຟ",
+                                    icon: "assets/icons/trans.png",
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Get.offAllNamed(Routes.LOGIN);
+                                    },
+                                    child: ItemKategori(
+                                      title: "ລົດເມ",
+                                      icon: "assets/icons/bus.png",
+                                    ),
+                                  ),
+                                  ItemKategori(
+                                    title: "ລົດທ່ອງທ່ຽວ",
+                                    icon: "assets/icons/electric.png",
                                   ),
                                 ],
                               ),
@@ -263,40 +287,40 @@ class HomeView extends GetView<HomeController> {
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
-                                children: [
-                                  ItemKategori(
-                                    title: "Hiburan",
-                                    icon: "assets/icons/hiburan.png",
-                                  ),
-                                  ItemKategori(
-                                    title: "Unggulan",
-                                    icon: "assets/icons/unggulan.png",
-                                  ),
-                                  ItemKategori(
-                                    title: "Tersimpan",
-                                    icon: "assets/icons/tersimpan.png",
-                                  ),
-                                  ItemKategori(
-                                    title: "Riwayat",
-                                    icon: "assets/icons/riwayat-icon.png",
-                                  ),
-                                ],
+                                // children: [
+                                //   ItemKategori(
+                                //     title: "Hiburan",
+                                //     icon: "assets/icons/hiburan.png",
+                                //   ),
+                                //   ItemKategori(
+                                //     title: "Unggulan",
+                                //     icon: "assets/icons/unggulan.png",
+                                //   ),
+                                //   ItemKategori(
+                                //     title: "Tersimpan",
+                                //     icon: "assets/icons/tersimpan.png",
+                                //   ),
+                                //   ItemKategori(
+                                //     title: "Riwayat",
+                                //     icon: "assets/icons/riwayat-icon.png",
+                                //   ),
+                                // ],
                               ),
-                              SizedBox(height: 30),
+                              SizedBox(height: 20),
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    "Terbaru dari Telkomsel",
+                                    "ຕົວເລືອກຖ້ຽວໂດຍສານສໍາລັບທ່ານ",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 18,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                   Text(
-                                    "Lihat Semua",
+                                    "ທັງໝົດ",
                                     style: TextStyle(
                                       fontSize: 16,
                                       color: Colors.red,
@@ -305,7 +329,7 @@ class HomeView extends GetView<HomeController> {
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 20),
+                              SizedBox(height: 10),
                               SingleChildScrollView(
                                 scrollDirection: Axis.horizontal,
                                 child: Row(
@@ -331,18 +355,18 @@ class HomeView extends GetView<HomeController> {
                                   ],
                                 ),
                               ),
-                              SizedBox(height: 30),
+                              SizedBox(height: 10),
                             ],
                           ),
                         ),
                         // Navigation
                         Container(
-                          margin: EdgeInsets.only(bottom: 20),
-                          height: 100,
+                          margin: EdgeInsets.only(bottom: 10),
+                          height: 80,
                           decoration: BoxDecoration(
                             border: Border(
                               top: BorderSide(
-                                color: Colors.grey,
+                                color: Color.fromARGB(255, 128, 125, 125),
                               ),
                             ),
                           ),
@@ -353,27 +377,35 @@ class HomeView extends GetView<HomeController> {
                               ItemNav(
                                 icon: "beranda",
                                 status: true,
-                                title: "Beranda",
+                                title: "ໜ້າຫຼັກ",
                               ),
-                              ItemNav(
-                                icon: "riwayat",
-                                status: false,
-                                title: "Riwayat",
+                              GestureDetector(
+                                onTap: () {
+                                  Get.offAllNamed(Routes.LOGIN);
+                                },
+                                child: ItemNav(
+                                  icon: "ticket",
+                                  status: false,
+                                  title: "ປີ້ຂອງຂ້ອຍ",
+                                ),
                               ),
-                              ItemNav(
-                                icon: "bantuan",
-                                status: false,
-                                title: "Bantuan",
-                              ),
-                              ItemNav(
-                                icon: "inbox",
-                                status: false,
-                                title: "Inbox",
-                              ),
-                              ItemNav(
-                                icon: "profile",
-                                status: false,
-                                title: "Akun Saya",
+                              GestureDetector(
+                                // onTap: () {
+                                //   Get.offAllNamed(Routes.LOGIN);
+                                // },
+                                onTap: () {
+                                  // Navigate to the "Home" screen when tapped
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => ProfileScreen ()),
+                                  );
+                                },
+                                child: ItemNav(
+                                  icon: "profile",
+                                  status: false,
+                                  title: "ບັນຊີຂອງຂ້ອຍ",
+                                ),
                               ),
                             ],
                           ),
@@ -402,9 +434,9 @@ class ItemTerbaru extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(right: 20),
+      margin: EdgeInsets.only(right: 10),
       width: Get.width * 0.7,
-      height: 100,
+      height: 130,
       decoration: BoxDecoration(
         color: Colors.amber,
         borderRadius: BorderRadius.circular(20),
@@ -438,6 +470,7 @@ class ItemKategori extends StatelessWidget {
           height: 50,
           child: Image.asset(
             icon,
+            // color: Color(0xFFF7B731),
             fit: BoxFit.cover,
           ),
         ),
@@ -480,11 +513,26 @@ class ItemNav extends StatelessWidget {
           ),
         ),
         SizedBox(height: 5),
-        Text(
-          "Beranda",
-          style: TextStyle(
-            color: (status == true) ? Color(0xFFEC2028) : Color(0xFF747D8C),
-          ),
+        Row(
+          children: [
+            Text(
+              status ? "$title" : "$title",
+              style: TextStyle(
+                color: (status == true)
+                    ? Color.fromARGB(255, 103, 32, 236)
+                    : Color(0xFF747D8C),
+              ),
+            ),
+
+            // Text(
+            //   "ໜ້າຫຼັກ",
+            //   style: TextStyle(
+            //     color: (status == true)
+            //         ? Color.fromARGB(255, 103, 32, 236)
+            //         : Color(0xFF747D8C),
+            //   ),
+            // ),
+          ],
         ),
       ],
     );
@@ -549,7 +597,7 @@ class ClipInfoClass extends CustomClipper<Path> {
   Path getClip(Size size) {
     Path path = Path();
     path.lineTo(0, size.height);
-    path.lineTo(size.width - 80, size.height);
+    path.lineTo(size.width - 50, size.height);
     path.lineTo(size.width, size.height - 80);
     path.lineTo(size.width, 0);
     path.close();
