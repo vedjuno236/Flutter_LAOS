@@ -13,7 +13,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-         centerTitle: false,
+        centerTitle: false,
         title: RichText(
           text: TextSpan(
             text: "Hi, ",
@@ -269,8 +269,16 @@ class HomeView extends GetView<HomeController> {
                                     icon: "assets/icons/trans.png",
                                   ),
                                   GestureDetector(
+                                    // onTap: () {
+                                    //   Get.offAllNamed(Routes.LOGIN);
+                                    // },
                                     onTap: () {
-                                      Get.offAllNamed(Routes.LOGIN);
+                                      // Navigate to the "Home" screen when tapped
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => BusView()),
+                                      );
                                     },
                                     child: ItemKategori(
                                       title: "ລົດເມ",
@@ -398,7 +406,7 @@ class HomeView extends GetView<HomeController> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => ProfileScreen ()),
+                                        builder: (context) => ProfileScreen()),
                                   );
                                 },
                                 child: ItemNav(

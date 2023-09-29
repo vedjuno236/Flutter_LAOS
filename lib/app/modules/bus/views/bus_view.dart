@@ -11,7 +11,45 @@ class BusView extends GetView<BusController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+       appBar: AppBar(
+        centerTitle: false,
+        title: RichText(
+          text: TextSpan(
+            text: "Hi, ",
+            style: TextStyle(
+              fontSize: 18,
+            ),
+            children: [
+              TextSpan(
+                text: "vedjuno",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              )
+            ],
+          ),
+        ),
+        actions: [
+          GestureDetector(
+            onTap: () {
+              Get.offAllNamed(Routes.LOGIN);
+            },
+            child: Container(
+              margin: EdgeInsets.only(right: 20),
+              width: 30,
+              height: 30,
+              child: Image.asset(
+                "assets/icons/qr.png",
+                fit: BoxFit.contain,
+              ),
+            ),
+          ),
+        ],
+        backgroundColor: Color(0xFFEC2028),
+        elevation: 0,
+      ),
+
     );
   }
 }

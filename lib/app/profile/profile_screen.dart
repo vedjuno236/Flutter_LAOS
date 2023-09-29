@@ -19,6 +19,7 @@ class ProfileScreen extends StatelessWidget {
             icon: Icon(Icons.settings_rounded),
           ),
         ],
+        
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(8.0),
@@ -52,7 +53,7 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 40),
-            const Divider(),
+            // const Divider(),
             const SizedBox(height: 10),
             Column(
               children: [
