@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:mytsel/app/modules/bus/views/bus_view.dart';
-import 'package:mytsel/app/profile/profile_screen.dart';
+import 'package:mytsel/app/modules/search_tickets/views/search.dart';
+import 'package:mytsel/app/modules/profile/profile_screen.dart';
 import 'package:mytsel/app/routes/app_pages.dart';
 
 import '../controllers/home_controller.dart';
@@ -277,7 +278,7 @@ class HomeView extends GetView<HomeController> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => BusView()),
+                                            builder: (context) => Search()),
                                       );
                                     },
                                     child: ItemKategori(

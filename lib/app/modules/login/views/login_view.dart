@@ -16,10 +16,10 @@ class LoginView extends GetView<LoginController> {
           children: [
             SizedBox(height: 20),
             Container(
-              alignment: Alignment.centerLeft,
+              alignment: Alignment.center,
               height: 150,
               child: Image.asset(
-                "assets/logo/logo-login.png",
+                "assets/logo/logo-laos.png",
                 fit: BoxFit.contain,
               ),
             ),
