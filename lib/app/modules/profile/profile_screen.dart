@@ -172,6 +172,30 @@ class ProfileScreen extends StatelessWidget {
           ],
         ),
       ),
+        bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: ImageIcon(
+              AssetImage("assets/icons/beranda.png"),
+            ),
+            label: "ໜ້າຫຼັກ",
+          ),
+          BottomNavigationBarItem(
+            icon: ImageIcon(
+              AssetImage("assets/icons/ticket.png"),
+            ),
+            label: "ປີ້ຂອງຂ້ອຍ",
+          ),
+           BottomNavigationBarItem(
+            icon: ImageIcon(
+              AssetImage("assets/icons/profile.png"),
+              color: Colors.red,
+            ),
+            label: "ບັນຊີຂອງຂ້ອຍ",
+          ),
+
+        ],
+      ),
     );
   }
 }

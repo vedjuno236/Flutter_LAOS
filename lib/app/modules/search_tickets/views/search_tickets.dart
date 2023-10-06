@@ -3,8 +3,8 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Search extends StatelessWidget {
-  const Search({Key? key}) : super(key: key);
+class Search_tickets extends StatelessWidget {
+  const Search_tickets({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -359,43 +359,35 @@ class TicketView extends StatelessWidget {
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                         color: Colors.grey)),
-                // Expanded(
-
-                // child: Text("\u0024 240",
-                //     textAlign: TextAlign.end,
-                //     style: TextStyle(
-                //         fontSize: 18,
-                //         fontWeight: FontWeight.bold,
-                //         color: Colors.black)
-                //         )
-                // ),
                 SizedBox(width: 100),
-
-                SizedBox(
-                  height: 40,
-                  width: 90,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      // Add your button click logic here
-                    },
-                    child: Text(
-                      "ຊື້",
-                      textAlign: TextAlign.end,
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    ),
-                    style: ButtonStyle(
-                      foregroundColor: MaterialStateProperty.all(Colors.white),
-                      backgroundColor: MaterialStateProperty.all(Colors.red),
-                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        side: BorderSide(color: Colors.red),
-                      )),
-                    ),
-                  ),
-                ),
+                // SizedBox(
+                //   height: 40,
+                //   width: 80,
+                   Padding(
+                     padding: const EdgeInsets.all(10.0),
+                     child: ElevatedButton(
+                      onPressed: () {
+                        // Add your button click logic here
+                      },
+                      child: Text(
+                        "ຊື້",
+                        textAlign: TextAlign.end,
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                      style: ButtonStyle(
+                        foregroundColor: MaterialStateProperty.all(Colors.white),
+                        backgroundColor: MaterialStateProperty.all(Colors.red),
+                        shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          side: BorderSide(color: Colors.red),
+                        )),
+                      ),
+                                     // ),
+                                   ),
+                   ),
               ],
             ),
           ),
@@ -404,11 +396,6 @@ class TicketView extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
 
 class TicketView1 extends StatelessWidget {
   @override
@@ -690,33 +677,32 @@ class TicketView1 extends StatelessWidget {
                 //         color: Colors.black)
                 //         )
                 // ),
-                SizedBox(width: 100),
-
-                SizedBox(
-                  height: 40,
-                  width: 90,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      // Add your button click logic here
-                    },
-                    child: Text(
-                      "ຊື້",
-                      textAlign: TextAlign.end,
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    ),
-                    style: ButtonStyle(
-                      foregroundColor: MaterialStateProperty.all(Colors.white),
-                      backgroundColor: MaterialStateProperty.all(Colors.red),
-                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        side: BorderSide(color: Colors.red),
-                      )),
-                    ),
-                  ),
-                ),
+                SizedBox(width: 100),               
+                   Padding(
+                     padding: const EdgeInsets.all(10.0),
+                     child: ElevatedButton(
+                      onPressed: () {
+                        // Add your button click logic here
+                      },
+                      child: Text(
+                        "ຊື້",
+                        textAlign: TextAlign.end,
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                      style: ButtonStyle(
+                        foregroundColor: MaterialStateProperty.all(Colors.white),
+                        backgroundColor: MaterialStateProperty.all(Colors.red),
+                        shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          side: BorderSide(color: Colors.red),
+                        )),
+                      ),
+                                     ),
+                   ),
+                // ),
               ],
             ),
           ),

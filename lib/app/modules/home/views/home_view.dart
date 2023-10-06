@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:mytsel/app/modules/bus/views/bus_view.dart';
-import 'package:mytsel/app/modules/search_tickets/views/search.dart';
+import 'package:mytsel/app/modules/search_tickets/views/search_tickets.dart';
 import 'package:mytsel/app/modules/profile/profile_screen.dart';
 import 'package:mytsel/app/routes/app_pages.dart';
 
@@ -270,15 +270,13 @@ class HomeView extends GetView<HomeController> {
                                     icon: "assets/icons/trans.png",
                                   ),
                                   GestureDetector(
-                                    // onTap: () {
-                                    //   Get.offAllNamed(Routes.LOGIN);
-                                    // },
+                                   
                                     onTap: () {
-                                      // Navigate to the "Home" screen when tapped
+                                     
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => Search()),
+                                            builder: (context) => BusView()),
                                       );
                                     },
                                     child: ItemKategori(
@@ -296,24 +294,7 @@ class HomeView extends GetView<HomeController> {
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
-                                // children: [
-                                //   ItemKategori(
-                                //     title: "Hiburan",
-                                //     icon: "assets/icons/hiburan.png",
-                                //   ),
-                                //   ItemKategori(
-                                //     title: "Unggulan",
-                                //     icon: "assets/icons/unggulan.png",
-                                //   ),
-                                //   ItemKategori(
-                                //     title: "Tersimpan",
-                                //     icon: "assets/icons/tersimpan.png",
-                                //   ),
-                                //   ItemKategori(
-                                //     title: "Riwayat",
-                                //     icon: "assets/icons/riwayat-icon.png",
-                                //   ),
-                                // ],
+                              
                               ),
                               SizedBox(height: 20),
                               Row(
@@ -428,6 +409,7 @@ class HomeView extends GetView<HomeController> {
           )
         ],
       ),
+   
     );
   }
 }

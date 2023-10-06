@@ -6,11 +6,14 @@ abstract class Routes {
 
   static const HOME = _Paths.HOME;
   static const LOGIN = _Paths.LOGIN;
-  // static const BUS = _Paths.BUS;
+  // static const Search = _Paths.Seach;
 }
 
 abstract class _Paths {
   static const HOME = '/home';
   static const LOGIN = '/login';
   static const Bus = '/bus';
+  static const Search_to = '/search_to';
+  static const Search_form = '/search_form';
+
 }
